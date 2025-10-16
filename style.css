@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #fdfbfb, #97bacb, #cce3de);
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 950px;
+  margin: 30px auto;
+  background: #f4eff2d8;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  padding: 25px 35px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.input-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #a7c7e7;
+  font-size: 1rem;
+  width: 50%;
+}
+
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #90e0ef;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #48cae4;
+}
+
+.panels {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.panel {
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 1.5px solid #ddd;
+  padding: 10px;
+}
+
+.panel h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+.expr-box, .stack-box {
+  background: white;
+  border-radius: 8px;
+  border: 2px solid #dee2e6;
+  padding: 10px;
+  min-height: 40px;
+  font-family: monospace;
+  font-size: 1.1rem;
+  overflow-x: auto;
+}
+
+.stack-box {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.stack-item {
+  background: #ffd6a5;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin: 4px 0;
+}
+
+.highlight {
+  background: #caf0f8;
+  border-radius: 4px;
+  padding: 2px 5px;
+  font-weight: bold;
+}
+
+.info-box {
+  background: #f1faee;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.pseudocode-box {
+  background: #eaf4f4;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+pre {
+  font-family: "Courier New", monospace;
+  font-size: 0.95rem;
+  margin: 0;
+}

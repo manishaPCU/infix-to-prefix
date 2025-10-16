@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Infix → Prefix Conversion Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Infix → Prefix Conversion</h1>
+  
+    <!-- Input and Controls -->
+    <div class="input-section">
+      <input type="text" id="infixInput" placeholder="Enter infix expression (e.g. (A+B)*C)" />
+      <button id="startBtn">Start</button>
+      <button id="prevBtn">⏪ Prev</button>
+      <button id="nextBtn">⏩ Next</button>
+      <button id="autoBtn">▶ Auto</button>
+      <button id="resetBtn">⟳ Reset</button>
+    </div>
+
+    <!-- Panels -->
+    <div class="panels">
+      <div class="panel">
+        <h3>Reversed (and Parentheses Swapped) Infix</h3>
+        <div id="scanArea" class="expr-box"></div>
+      </div>
+
+      <div class="panel">
+        <h3>Operator Stack</h3>
+        <div id="stackArea" class="stack-box"></div>
+      </div>
+
+      <div class="panel">
+        <h3>Postfix Expression (from reversed infix)</h3>
+        <div id="postfixArea" class="expr-box"></div>
+      </div>
+
+      <div class="panel">
+        <h3>Final Prefix Result</h3>
+        <div id="outputArea" class="expr-box"></div>
+      </div>
+    </div>
+
+    <!-- Step Info -->
+    <div class="info-box">
+      <strong>Step Info:</strong>
+      <p id="infoArea">—</p>
+    </div>
+
+    <!-- Pseudocode -->
+    <div class="pseudocode-box">
+      <h3>Algorithm (Infix → Prefix)</h3>
+      <pre>
+1. Reverse the infix expression
+2. Swap '(' with ')' and vice versa
+3. Convert the reversed expression to postfix
+4. Reverse the postfix result → Prefix
+      </pre>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
