@@ -127,3 +127,100 @@ pre {
   font-size: 0.95rem;
   margin: 0;
 }
+@media (max-width: 992px) {
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  input {
+    width: 70%;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .panel h3 {
+    font-size: 1rem;
+  }
+
+  .expr-box, .stack-box {
+    font-size: 1rem;
+  }
+}
+
+/* For mobile screens (phones) */
+@media (max-width: 600px) {
+  .input-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  input {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .panels {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .panel {
+    padding: 8px;
+  }
+
+  .panel h3 {
+    font-size: 0.95rem;
+  }
+
+  .expr-box, .stack-box {
+    font-size: 0.95rem;
+    min-height: 35px;
+  }
+
+  .info-box, .pseudocode-box {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  pre {
+    font-size: 0.85rem;
+    white-space: pre-wrap; /* Allow wrapping on small screens */
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+/* For very large screens (wide monitors) */
+@media (min-width: 1200px) {
+  .panels {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .panel {
+    min-height: 160px;
+  }
+
+  .info-box, .pseudocode-box {
+    font-size: 1rem;
+  }
+}
+
+
