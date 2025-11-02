@@ -44,7 +44,7 @@ input {
   border-radius: 8px;
   border: 2px solid #a7c7e7;
   font-size: 1rem;
-  /*flex: 1 1 300px; /* Flexible width */
+  flex: 1 1 300px; /* Flexible width */
   min-width: 250px;
   max-width: 600px;
   box-sizing: border-box;
@@ -169,14 +169,14 @@ pre {
   }
 
   input {
-    width: 100%;
+    width: 90%;
     max-width: 100%;
     font-size: 0.95rem;
     box-sizing: border-box;
   }
 
   button {
-    width: 100%;
+    width: 97%;
     font-size: 0.9rem;
   }
 
@@ -230,6 +230,7 @@ pre {
     font-size: 1rem;
   }
 }
+
 
 
 
