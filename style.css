@@ -170,9 +170,7 @@ pre {
 
   input {
     width: 90%;
-    max-width: 100%;
     font-size: 0.95rem;
-    box-sizing: border-box;
   }
 
   button {
@@ -230,6 +228,7 @@ pre {
     font-size: 1rem;
   }
 }
+
 
 
 
