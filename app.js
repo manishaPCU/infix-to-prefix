@@ -2,7 +2,7 @@ function precedence(c) {
   if (c === '^') return 3;
   if (c === '*' || c === '/') return 2;
   if (c === '+' || c === '-') return 1;
-  return -1;
+  return -1; // Invalid operator
 }
 
 function generateSteps(infix) {
@@ -41,6 +41,13 @@ function generateSteps(infix) {
       stack.pop();
       action = `Pop until '(' found`;
     } else {
+      // ✅ Validation: Check for invalid operator
+      if (precedence(ch) === -1) {
+        alert(`Invalid operator '${ch}' detected! Please enter a valid expression.`);
+        steps = [];
+        return [];
+      }
+
       while (stack.length && precedence(ch) <= precedence(stack[stack.length - 1])) {
         postfix += stack.pop();
       }
@@ -126,6 +133,7 @@ document.getElementById('startBtn').addEventListener('click', () => {
   const infix = document.getElementById('infixInput').value.trim();
   if (!infix) return alert('Enter an infix expression');
   steps = generateSteps(infix);
+  if (steps.length === 0) return; // Stop if invalid expression
   current = 0;
   updateUI();
 });
@@ -158,6 +166,9 @@ document.getElementById('resetBtn').addEventListener('click', () => {
   autoPlayId = null;
   current = 0;
   steps = [];
+
+  // ✅ Clear all UI elements and input field
+  document.getElementById('infixInput').value = ''; // Clears input box
   document.getElementById('scanArea').textContent = '';
   document.getElementById('stackArea').innerHTML = '';
   document.getElementById('postfixArea').textContent = '';
